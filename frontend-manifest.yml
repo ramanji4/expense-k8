@@ -3,8 +3,8 @@ kind: ConfigMap
 metadata:
   name: frontend
   namespace: expense
-data: 
-  nginx.conf: |                  # here | represents multi line file
+data:
+  nginx.conf: | # | represents multi line file
     user www-data;
     worker_processes 4;
     pid /var/run/nginx.pid;
@@ -83,7 +83,7 @@ data:
         location = /50x.html {
             root   /usr/share/nginx/html;
         }
-
+        # this is as part of nginx configmap
         location /api/ { 
             proxy_pass http://backend:8080/;
         }
