@@ -176,14 +176,14 @@ spec:
 
 ---
 
-apiVersion: elbv2.k8s.aws/v1beta1
-kind: TargetGroupBinding
-metadata:
-  name: frontend
-  namespace: expense
-spec:
-  serviceRef:
-    name: frontend #
-    port: 80
-  targetGroupARN: <arn-to-targetGroup>
-  targetType: ip
+# apiVersion: elbv2.k8s.aws/v1beta1
+# kind: TargetGroupBinding
+# metadata:
+#   name: frontend
+#   namespace: expense
+# spec:
+#   serviceRef:
+#     name: frontend #
+#     port: 80
+#   targetGroupARN: <arn-to-targetGroup>
+#   targetType: ip
