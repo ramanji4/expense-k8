@@ -85,7 +85,7 @@ data:
         }
         # this is as part of nginx configmap
         location /api/ { 
-            proxy_pass http://backend:80/;
+            proxy_pass http://backend:8080/;
         }
 
         }
@@ -156,7 +156,7 @@ spec:
   - name: frontend-port
     protocol: TCP
     port: 80
-    targetPort: 80
+    targetPort: 8080
 
 ---
 
