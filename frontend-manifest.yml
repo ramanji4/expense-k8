@@ -117,7 +117,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: ramanji4/frontend:v1
+        image: ramanji4/frontend:v2
         resources:
           requests:
             cpu: 100m
