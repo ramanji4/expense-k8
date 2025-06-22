@@ -24,6 +24,11 @@ spec:
       containers:
       - name: frontend
         image: ramanji4/frontend:v1
+        securityContext:
+          runAsUser: 101                # UID of 'nginx' user
+          runAsGroup: 101               # GID of 'nginx' user
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: false
 
 ---
 
