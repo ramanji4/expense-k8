@@ -24,6 +24,8 @@ spec:
       containers:
       - name: frontend
         image: ramanji4/frontend:v1
+        ports:
+        - containerPort: 80
         securityContext:
           runAsUser: 101                # UID of 'nginx' user
           runAsGroup: 101               # GID of 'nginx' user
