@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend
+  namespace: expense
   labels:         #these are replicaset service labels
     app: frontend
     tier: web
@@ -22,9 +23,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: joindevops/frontend:v1
-        ports:
-        - containerPort: 8088
+        image: ramanji4/frontend:v1
 
 ---
 
@@ -43,4 +42,4 @@ spec:
   - name: frontend-port
     protocol: TCP
     port: 80
-    targetPort: 8088
+    targetPort: 80
