@@ -30,7 +30,7 @@ spec:
           runAsUser: 101                # UID of 'nginx' user
           runAsGroup: 101               # GID of 'nginx' user
           allowPrivilegeEscalation: false
-          readOnlyRootFilesystem: false
+          readOnlyRootFilesystem: true
 
 ---
 
