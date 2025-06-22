@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: ramanji4/frontend:v1
+        image: joindevops/frontend:v1
 
 ---
 
